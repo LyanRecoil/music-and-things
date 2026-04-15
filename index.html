@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Reproductor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-image: url('https://drive.google.com/uc?export=view&id=1Yb4m60be9uHxVGbY9OEsZjqqW1UTu-LC');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .player {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 300px;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player">
+    <h1>Reproductor</h1>
+    <audio controls>
+      <source src="https://drive.google.com/uc?export=download&id=1M9o8I0a6dKZtAw8v-cnzmxQ18_F8zkOF" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+  </div>
+
+</body>
+</html>
