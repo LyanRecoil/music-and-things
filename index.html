@@ -13,23 +13,43 @@
       justify-content: center;
       align-items: center;
       font-family: Arial, sans-serif;
-      background: url('Imagen.png') no-repeat center center/cover;
+      background: url('background.jpg') no-repeat center center/cover;
     }
 
     .player {
       width: 320px;
-      background: #121212;
+      background: url('vomito.jpg') center/cover;
+      position: relative;
       border-radius: 20px;
       padding: 20px;
       color: white;
       box-shadow: 0 10px 40px rgba(0,0,0,0.6);
       text-align: center;
+      overflow: hidden;
+    }
+
+    .player::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: brightness(0.6);
+      z-index: 0;
+      border-radius: 20px;
+    }
+
+    .player * {
+      position: relative;
+      z-index: 1;
     }
 
     .cover {
       width: 100%;
       height: 200px;
-      background: url('Imagen.png') center/cover;
+      background: url('background.jpg') center/cover;
       border-radius: 15px;
       margin-bottom: 15px;
     }
@@ -62,7 +82,7 @@
     }
 
     .play {
-      background: #1db954;
+      background: #1DB954;
       border-radius: 50%;
       width: 50px;
       height: 50px;
@@ -70,6 +90,7 @@
       justify-content: center;
       align-items: center;
       font-size: 22px;
+      box-shadow: 0 0 15px rgba(29,185,84,0.6);
     }
 
     .progress {
@@ -93,8 +114,8 @@
 
   <div class="player">
     <div class="cover"></div>
-    <div class="title">NOVA'S PUKE TORTURE</div>
-    <div class="artist">LyanRecoil</div>
+    <div class="title">Mi Canción</div>
+    <div class="artist">Artista</div>
 
     <div class="progress" id="progress">
       <div class="progress-bar" id="progressBar"></div>
